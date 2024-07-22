@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Portuguesando{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Portuguesando</h1>
+        </div>
+        <div class="banner"></div>
+        <div class="menu">        
+            <a href="{% url 'home' %}" data-banner="{% static 'images/home-banner.jpg' %}">Home</a>
+            <a href="{% url 'sobre' %}" data-banner="sobre-banner.jpg">Sobre</a></li>
+            <a href="#">Cadastre-se</a></li>
+            <a href="#">Aulas</a></li>
+            <a href="#">Cronogramas</a></li>
+        </div>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
