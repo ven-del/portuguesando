@@ -29,7 +29,7 @@ nav .logo h1 {
 nav .banner {
     width: 100%;
     height: 200px;
-    background: url('./images/home-banner.jpg') no-repeat center center;
+    background: url('{% static "images/banner3.jpg" %}') no-repeat center center;
     background-size: cover;
     transition: background-image 0.5s ease-in-out;
 }
@@ -44,7 +44,7 @@ nav .menu {
 nav .menu a {
     color: #fff;
     text-decoration: none;
-    padding: 15px 160px;
+    padding: 15px 200px;
     display: block;
 }
 

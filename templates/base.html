@@ -1,29 +1,37 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="pt-br">
-<head>
+<head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Portuguesando{% endblock %}</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body>
+<body>    
     <nav>
         <div class="logo">
             <h1>Portuguesando</h1>
         </div>
-        <div class="banner"></div>
+        <div id="banner" class="banner"></div>
         <div class="menu">        
-            <a href="{% url 'home' %}" data-banner="{% static 'images/home-banner.jpg' %}">Home</a>
-            <a href="{% url 'sobre' %}" data-banner="sobre-banner.jpg">Sobre</a></li>
-            <a href="#">Cadastre-se</a></li>
-            <a href="#">Aulas</a></li>
-            <a href="#">Cronogramas</a></li>
+            <a href="{% url 'home' %}" data-banner="{% static 'images/galinha-pintadinha.png' %}">Home</a>
+            <a href="{% url 'sobre' %}" data-banner="{% static 'images/mundo-bita.png' %}">Sobre</a>
+            <a href="{% url 'sobre' %}" data-banner="{% static 'images/tv-ra-tim-bum.png' %}">Cadastre-se</a>
+            <a href="{% url 'sobre' %}" data-banner="{% static 'images/turma-da-monica.png' %}">Aulas</a>
+            <a href="{% url 'sobre' %}" data-banner="{% static 'images/sobre-banner.jpg' %}">Cronogramas</a>            
         </div>
     </nav>
     <main>
         {% block content %}
         {% endblock %}
     </main>
+    <script>
+        // Adiciona funcionalidade para mudar a imagem do banner ao passar o mouse sobre os links do menu
+        document.querySelectorAll('.menu a').forEach(link => {
+            link.addEventListener('mouseover', function() {
+                document.getElementById('banner').style.backgroundImage = `url(${this.getAttribute('data-banner')})`;
+            });
+        });
+    </script>
 </body>
 </html>

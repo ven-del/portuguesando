@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
-
+{% load static %} 
 {% block title %}Sobre{% endblock %}
 
 {% block content %}
 <h1>Sobre Nós</h1>
 <p>Portuguesando é uma plataforma dedicada a ensinar português para falantes de árabe no Egito. Nossa missão é proporcionar um aprendizado eficiente e acessível para todos.</p>
+
+<h1>Sobre Ameena</h1>
+<p>Ameena Khasif é uma professora apaixonada pela língua portuguesa e pelo ensino. Nascida no Brasil, sempre teve o desejo de compartilhar o conhecimento da língua portuguesa com pessoas ao redor do mundo. Com grande entusiasmo, Ameena se uniu a esta plataforma para ensinar português para falantes de árabe no Egito, combinando suas paixões em um único projeto inspirador.</p>
+
+<img src="{% static 'images/ameena.jpg' %}" alt="Ameena" style="max-width: 100%; height: auto; margin-top: 20px;">
 {% endblock %}

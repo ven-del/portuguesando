@@ -29,8 +29,8 @@ nav .logo h1 {
 nav .banner {
     width: 100%;
     height: 200px;
-    background-image: url('../images/home-banner.jpg') no-repeat center center;
-    background-size: cover;
+    background: url('../images/galinha-pintadinha.png') no-repeat center center;
+    background-size: 30% auto;
     transition: background-image 0.5s ease-in-out;
 }
 
@@ -44,7 +44,7 @@ nav .menu {
 nav .menu a {
     color: #fff;
     text-decoration: none;
-    padding: 15px 160px;
+    padding: 15px 155px;
     display: block;
 }
 
@@ -68,3 +68,41 @@ main p {
     font-size: 1.2rem;
     color: #666;
 }
+
+
+/* Estilo para os links sugeridos */
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.links .item {
+    display: flex;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    margin: 10px;
+    text-align: center;
+}
+
+.links .item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.links .item p {
+    font-size: 1.2rem;
+    color: #333;
+}
+.links .link a {
+    flex: 1 1 calc(33.333% - 20px);
+    display: block;
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+

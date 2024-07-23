@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-%gjrr&(rxsei9t74jz)3t8ffj4r*9z*$n2nfvvi7%a3gkuozh!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -71,10 +71,10 @@ TEMPLATES = [
     },
 ]
 
-STATIC_URL = '/static'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static', 'css'),
-                    os.path.join(BASE_DIR, 'static', 'images'),
-                    ]
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),
+                    os.path.join(BASE_DIR, 'static', 'images'), 
+]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 WSGI_APPLICATION = 'portuguesando.wsgi.application'

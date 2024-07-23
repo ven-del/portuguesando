@@ -1,8 +1,20 @@
 {% extends 'base.html' %}
-
-{% block title %}Home{% endblock %}
+{% load static %}
+{% block title %}Home - Portuguesando{% endblock %}
 
 {% block content %}
-<h1>Bem-vindo ao Portuguesando!</h1>
-<p>Aqui você encontrará tudo que precisa para aprender português de forma prática e eficiente.</p>
+    <h1>Bem-vindo ao Portuguesando!</h1>
+    <p>Aqui você aprenderá português de maneira divertida e interativa.</p>
+
+    <h2>Sugestões para Iniciantes</h2>
+    <div id="links" class="links">
+        {% for link in links %}
+        <div id="link-item" class="link-item">
+            <a href="{{ link.url }}" target="_blank">
+                <img class="img" src="{% static link.image %}" alt="{{ link.name }}">
+                <p>{{ link.name }}</p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
 {% endblock %}
