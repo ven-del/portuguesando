@@ -12,13 +12,15 @@
         <div class="logo">
             <h1>Portuguesando</h1>
         </div>
-        <div id="banner" class="banner"></div>
-        <div class="menu">        
-            <a href="{% url 'home' %}" data-banner="{% static 'images/galinha-pintadinha.png' %}">Home</a>
-            <a href="{% url 'sobre' %}" data-banner="{% static 'images/mundo-bita.png' %}">Sobre</a>
-            <a href="{% url 'sobre' %}" data-banner="{% static 'images/tv-ra-tim-bum.png' %}">Cadastre-se</a>
-            <a href="{% url 'sobre' %}" data-banner="{% static 'images/turma-da-monica.png' %}">Aulas</a>
-            <a href="{% url 'sobre' %}" data-banner="{% static 'images/sobre-banner.jpg' %}">Cronogramas</a>            
+        <div id="banner" class="banner">
+            <span id="banner-text">Boas-Vindas!</span>
+        </div>
+        <div class="menu">
+            <a href="{% url 'home' %}" data-banner="Esta é a página inicial da nossa plataforma!">Home</a>
+            <a href="{% url 'sobre' %}" data-banner="Coneça-nos!">Sobre</a>
+            <a href="#" data-banner="Cadastre-se aqui!">Cadastre-se</a>
+            <a href="#" data-banner="Veja o seu cronograma de aulas">Aulas</a>
+            <a href="#" data-banner="Aqui tem livros em PDF para os alunos!">Downloads</a>
         </div>
     </nav>
     <main>
@@ -26,10 +28,43 @@
         {% endblock %}
     </main>
     <script>
-        // Adiciona funcionalidade para mudar a imagem do banner ao passar o mouse sobre os links do menu
+        // Texto padrão do banner
+        const defaultBannerText = "Boas-Vindas!";
+        const banner = document.getElementById('banner');
+        const bannerTextElement = document.getElementById('banner-text');
+    
+        // Configuração inicial
+        bannerTextElement.textContent = defaultBannerText;
+        bannerTextElement.classList.add('show-text');
+    
         document.querySelectorAll('.menu a').forEach(link => {
             link.addEventListener('mouseover', function() {
-                document.getElementById('banner').style.backgroundImage = `url(${this.getAttribute('data-banner')})`;
+                const newText = this.getAttribute('data-banner');
+                const currentText = bannerTextElement.textContent;
+    
+                if (currentText !== newText) {
+                    bannerTextElement.classList.remove('show-text');
+                    bannerTextElement.classList.add('hide-text');
+    
+                    // Após a animação de saída, atualiza o texto e inicia a animação de entrada
+                    bannerTextElement.addEventListener('animationend', function() {
+                        bannerTextElement.textContent = newText;
+                        bannerTextElement.classList.remove('hide-text');
+                        bannerTextElement.classList.add('show-text');
+                    }, { once: true });
+                }
+            });
+    
+            link.addEventListener('mouseout', function() {
+                bannerTextElement.classList.remove('show-text');
+                bannerTextElement.classList.add('hide-text');
+    
+                // Após a animação de saída, volta ao texto padrão e inicia a animação de entrada
+                bannerTextElement.addEventListener('animationend', function() {
+                    bannerTextElement.textContent = defaultBannerText;
+                    bannerTextElement.classList.remove('hide-text');
+                    bannerTextElement.classList.add('show-text');
+                }, { once: true });
             });
         });
     </script>

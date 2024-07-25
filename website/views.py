@@ -30,7 +30,7 @@ def home(request):
         {
             'name': 'Catalendas',
             'url': 'https://www.youtube.com/programacatalendas',
-            'image': 'images/catalendas.jpg'
+            'image': 'images/catalendas2.jpg'
         }
     ]
     return render(request, 'home.html', {'links': links})

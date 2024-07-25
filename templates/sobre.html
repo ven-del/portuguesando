@@ -1,13 +1,36 @@
 {% extends 'base.html' %}
-{% load static %} 
-{% block title %}Sobre{% endblock %}
+{% load static %}
+{% block title %}Sobre - Portuguesando{% endblock %}
 
 {% block content %}
-<h1>Sobre Nós</h1>
-<p>Portuguesando é uma plataforma dedicada a ensinar português para falantes de árabe no Egito. Nossa missão é proporcionar um aprendizado eficiente e acessível para todos.</p>
+    <div class="content-wrapper">
+        <h1>Sobre Nós</h1>
+        <p>
+            Bem-vindo à <strong>...</strong>, onde nos dedicamos a ensinar português brasileiro para estrangeiros de todas as partes do mundo. Fundada por Ana Rita, uma apaixonada pela língua e cultura brasileiras, nossa missão é facilitar a comunicação e a integração de falantes não nativos em ambientes de língua portuguesa.
+        </p>
 
-<h1>Sobre Ameena</h1>
-<p>Ameena Khasif é uma professora apaixonada pela língua portuguesa e pelo ensino. Nascida no Brasil, sempre teve o desejo de compartilhar o conhecimento da língua portuguesa com pessoas ao redor do mundo. Com grande entusiasmo, Ameena se uniu a esta plataforma para ensinar português para falantes de árabe no Egito, combinando suas paixões em um único projeto inspirador.</p>
+        <h2>Nossa Fundadora</h2>
+        <p>
+            Ana Rita possui vasta experiência no ensino de português como língua estrangeira. Com uma abordagem personalizada e dinâmica, ela acredita que aprender um novo idioma deve ser uma experiência enriquecedora e divertida.
+        </p>
 
-<img src="{% static 'images/ameena.jpg' %}" alt="Ameena" style="max-width: 100%; height: auto; margin-top: 20px;">
+        <h2>Nossa Metodologia</h2>
+        <p>
+            Utilizamos métodos de ensino modernos e interativos que se adaptam às necessidades de cada aluno. Nossas aulas são desenhadas para promover a prática contínua da fala, leitura, escrita e compreensão auditiva, garantindo que nossos alunos desenvolvam confiança e fluência no uso do português brasileiro.
+        </p>
+
+        <h2>Nossos Valores</h2>
+        <ul>
+            <li><strong>Qualidade:</strong> Comprometemo-nos a oferecer um ensino de excelência, focado nas necessidades individuais de nossos alunos.</li>
+            <li><strong>Flexibilidade:</strong> Oferecemos aulas presenciais no Grande Cairo e aulas online para alunos em qualquer parte do mundo, atendendo à disponibilidade e preferências de cada um.</li>
+            <li><strong>Cultura:</strong> Além da língua, introduzimos nossos alunos à rica cultura brasileira, tornando o aprendizado mais completo e interessante.</li>
+        </ul>
+
+        <h2>Nossa Visão</h2>
+        <p>
+            Nossa visão é criar uma comunidade global de falantes de português brasileiro, conectando culturas e promovendo a diversidade linguística.
+        </p>
+
+        <img src="{% static 'images/ameena.jpg' %}" alt="Ana Rita">
+    </div>
 {% endblock %}

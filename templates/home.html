@@ -7,11 +7,11 @@
     <p>Aqui você aprenderá português de maneira divertida e interativa.</p>
 
     <h2>Sugestões para Iniciantes</h2>
-    <div id="links" class="links">
+    <div class="links">
         {% for link in links %}
-        <div id="link-item" class="link-item">
+        <div class="link-item">
             <a href="{{ link.url }}" target="_blank">
-                <img class="img" src="{% static link.image %}" alt="{{ link.name }}">
+                <img src="{% static link.image %}" alt="{{ link.name }}">
                 <p>{{ link.name }}</p>
             </a>
         </div>
