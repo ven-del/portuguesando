@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Página do Aluno - Login{% endblock %}
+
+{% block content %}
+    <div class="login-wrapper">
+        <h1>Página do Aluno</h1>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-links">
+                <a href="#">Esqueceu a senha?</a>
+                <a href="#">Faça seu cadastro</a>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+{% endblock %}

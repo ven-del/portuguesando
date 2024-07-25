@@ -96,7 +96,7 @@ nav .menu {
 nav .menu a {
     color: #fff;
     text-decoration: none;
-    padding: 15px 155px;
+    padding: 15px 154px;
     display: block;
 }
 
@@ -224,4 +224,72 @@ main img {
     height: auto;
     display: block;
     margin: 20px auto;
+}
+
+/* Estilos para a página de login */
+.login-wrapper {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 20px 30px 20px 20px; /* Adicionando mais padding à direita */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-wrapper h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login-wrapper .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.login-wrapper .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.login-wrapper .form-group input {
+    width: calc(100% - 20px); /* Reduzindo a largura para ajustar ao padding */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.login-wrapper .form-links {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.login-wrapper .form-links a {
+    display: block;
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.login-wrapper .form-links a:hover {
+    text-decoration: underline;
+}
+
+.login-wrapper button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.login-wrapper button:hover {
+    background-color: #0056b3;
 }

@@ -37,3 +37,6 @@ def home(request):
 
 def sobre(request):
     return render(request, 'sobre.html')
+
+def login_view(request):
+    return render(request, 'login.html')
