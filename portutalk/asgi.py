@@ -1,5 +1,5 @@
 """
-ASGI config for portutalk project.
+ASGI config for Portutalk project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

@@ -40,3 +40,9 @@ def sobre(request):
 
 def login_view(request):
     return render(request, 'login.html')
+
+def aulas(request):
+    return render(request, 'aulas.html')
+
+def downloads(request):
+    return render(request, 'downloads.html')

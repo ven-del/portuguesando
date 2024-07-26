@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Aulas - PortuTalk{% endblock %}
+
+{% block content %}
+    <div class="login-wrapper">
+        <h1>Área Restrita</h1>
+        <p>Você precisa estar logado para acessar esta página.</p>
+        <p><a href="{% url 'login' %}">Faça login aqui</a> ou <a href="#">cadastre-se</a>.</p>
+    </div>
+{% endblock %}
