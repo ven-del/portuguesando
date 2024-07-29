@@ -13,11 +13,11 @@
             <h1>Portutalk</h1>
         </div>
         <div id="banner" class="banner">
-            <span id="banner-text">Boas-Vindas!</span>
+            <span id="banner-text">{{banner_text}}</span>
         </div>
         <div class="menu">
             <a href="{% url 'home' %}" data-banner="Esta é a página inicial da nossa plataforma!">Home</a>
-            <a href="{% url 'sobre' %}" data-banner="Coneça-nos!">Sobre</a>
+            <a href="{% url 'sobre' %}" data-banner="Conheça-nos!">Sobre</a>
             <a href="{% url 'login' %}" data-banner="Acesse aqui a sua Página do Aluno!">Página do Aluno</a>
             <a href="{% url 'aulas' %}" data-banner="Veja o seu cronograma de aulas">Aulas</a>
             <a href="{% url 'downloads' %}" data-banner="Aqui tem livros em PDF para os alunos!">Downloads</a>
@@ -29,7 +29,7 @@
     </main>
     <script>
         // Texto padrão do banner
-        const defaultBannerText = "Boas-Vindas!";
+        const defaultBannerText = "{{ banner_text }}";
         const banner = document.getElementById('banner');
         const bannerTextElement = document.getElementById('banner-text');
     
